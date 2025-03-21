@@ -23,6 +23,15 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
+        User::factory()->create([
+            "name" => "Alice",
+            "email" => "alice@gmail.com",
+        ]);
+        User::factory()->create([
+            "name" => "Bob",
+            "email" => "bob@gmail.com",
+        ]);
+
         Article::factory()->count(20)->create();
         Category::factory()->count(5)->create();
         Comment::factory()->count(40)->create();
